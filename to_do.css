@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #252525;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.input-row input:focus {
+    border-color: #6366f1;
+}
+
+.input-row button {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.input-row button:hover {
+    opacity: 0.85;
+}
+
+.filters {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.filter {
+    flex: 1;
+    padding: 7px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #252525;
+    color: #aaa;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter.active {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: #fff;
+    border-color: transparent;
+}
+
+#taskList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 40px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: 0.2s;
+    animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #555;
+}
+
+.task-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #6366f1;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+    padding: 0 2px;
+}
+
+.delete-btn:hover {
+    color: #ec4899;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+#taskCount {
+    font-size: 11px;
+    color: #666;
+}
+
+#clearBtn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 11px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#clearBtn:hover {
+    color: #ec4899;
+}
+
+.empty {
+    text-align: center;
+    color: #444;
+    font-size: 13px;
+    padding: 20px 0;
+}
