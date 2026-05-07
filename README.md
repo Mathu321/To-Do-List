@@ -14,14 +14,6 @@ Technologies Used
 - CSS3
 - JavaScript (ES6+)
 
-## Project Structure
-
-project-folder/
-│
-├── index.html
-├── style.css
-└── script.js
-
 How to Run
 
 1. Clone the repository
@@ -30,7 +22,7 @@ git clone <your-repo-link>
 
 2. Open the project folder
 
-3. Run `index.html` in your browser
+3. Run `to_do.html` in your browser
 
 Purpose
 
